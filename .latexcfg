@@ -1,0 +1,4 @@
+{
+  "toolchain" : "%TEX %ARG %DOC",
+  "latex_ext" : [ ".cls", ".sty" ]
+}
