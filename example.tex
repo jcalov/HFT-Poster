@@ -1,14 +1,13 @@
 \documentclass[
   scale = 1.5,
-  advisor = {{https://github.com/nachos-con-queso/HFT-Poster}},
-  authorLabel = {{(jens@calov.net)}},
-  advisorLabel = {{(Download-URL)}},
 ]{hftpostr}
 
 \title{Thesis-Poster mit \LaTeX}
 \author{Jens Calov}
+\advisor{Prof. Dr. XY}
+\studyProgramme{Bachelor-Studiengang Mathematik}
 
-\usetheme{PosterHFT1}
+% \usetheme{PosterHFT1}
 
 \usepackage{qrcode}
 
@@ -26,6 +25,7 @@
     Deshalb wurde nun eine \LaTeX-Dokumentenklasse entwickelt, die die PowerPoint-Vorlage ersetzen kann.
   \end{block}
 
+  % Die vertikalen Abstände zwischen den Zeilen müssen meist nachjustiert werden
   \vskip-2ex
 
   \begin{columns}[onlytextwidth, T]
@@ -60,18 +60,19 @@
             \textcolor{HFTred1}{\textbf{Bitte melde Dich!}}
           \end{center}
           Die Vorlage kann nur besser werden, wenn Du auch sagst was Dich stört oder was Du Dir wünschst.
-          Wer einen GitHub-Account hat, kann auch direkt auf der Projektseite (URL s.u.) ein Issue erstellen.
+          Wer einen GitHub-Account hat, kann auch direkt auf der Projektseite ein Issue erstellen.
           Wer \LaTeX-begeistert ist, darf gerne direkt an der Verbesserung der Vorlage mitwirken!
         \end{block}
       \end{column}
   \end{columns}
 
+  % Die vertikalen Abstände zwischen den Zeilen müssen meist nachjustiert werden
   \vskip1ex
 
   \begin{columns}[onlytextwidth, T]
       \begin{column}{.75\textwidth}
         \begin{block}{Verwendung}
-          In der Datei \texttt{main.tex} werden die Inhalte des Posters hauptsächlich mit zwei Umgebungen gesetzt: \textit{block} und \textit{columns}.
+          Die Inhalte des Posters werden hauptsächlich mit zwei Umgebungen gesetzt: \textit{block} und \textit{columns}.
           Hier ein Beispiel:
 
           \begin{columns}[onlytextwidth, T]
@@ -108,8 +109,9 @@
         \end{block}
       \end{column}
       \begin{column}{.21\textwidth}
-        \begin{block}{Link zum Download der Dokumentenklasse}
-        \qrcode[hyperlink, height=10.5cm]{https://github.com/nachos-con-queso/HFT-Poster/}
+        \begin{block}{Download der Dokumentenklasse}
+          \qrcode[height=7.2cm, padding, hyperlink]{https://github.com/jcalov/HFT-Poster/}
+          \centering{\small{\hyperlink{https://github.com/jcalov/HFT-Poster}{github.com/jcalov/HFT-Poster}}}
         \end{block}
       \end{column}
   \end{columns}
