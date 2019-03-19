@@ -14,11 +14,20 @@
 \DeclareStringOption[23mm]{marginTop}
 \DeclareStringOption[5mm]{marginBelowHeadline}
 \DeclareStringOption[7ex]{blockDistance}
-\DeclareStringOption[{Bachelor-Studiengang Mathematik}]{studyProgramme}
-\DeclareStringOption[{Prof. Dr. XYZ}]{advisor}
-\DeclareStringOption[\ (Autor)]{authorLabel}
-\DeclareStringOption[\ (Betreuer)]{advisorLabel}
 \ProcessKeyvalOptions*
+
+% Define commands
+\newcommand*{\studyProgramme}[1]{\def\@studyProgramme{#1}}
+\newcommand*{\advisor}[1]{\def\@advisor{#1}}
+\newcommand*{\authorLabel}[1]{\def\@authorLabel{#1}}
+\newcommand*{\advisorLabel}[1]{\def\@advisorLabel{#1}}
+
+% Set default values
+\studyProgramme{Bachelor-Studiengang Mathematik}
+\advisor{Prof. Dr. XY}
+\author{Name des Autors/der Autorin}
+\authorLabel{ (Autor)}
+\advisorLabel{ (Betreuer)}
 
 % The central package for our poster
 \RequirePackage[orientation=portrait, size=a1, scale=\hftpostr@scale]{beamerposter}
@@ -105,15 +114,15 @@
 \AtBeginDocument{
   \begin{textblock*}{560mm}(25mm,700mm)
     \fontsize{44pt}{0mm}\selectfont
-    \usebeamercolor{title in headline}{\color{bg}\insertauthor\ \hftpostr@authorLabel}
+    \usebeamercolor{title in headline}{\color{bg}\insertauthor\@authorLabel}
   \end{textblock*}
   \begin{textblock*}{560mm}(25mm,718mm)
     \fontsize{44pt}{0mm}\selectfont
-    \usebeamercolor{title in headline}{\color{bg}\hftpostr@advisor\ \hftpostr@advisorLabel}
+    \usebeamercolor{title in headline}{\color{bg}\@advisor\@advisorLabel}
   \end{textblock*}
   \begin{textblock*}{560mm}(12mm,751mm)
     \fontsize{65pt}{0mm}\selectfont
-    \usebeamercolor{title in headline}{\color{bg}\hftpostr@studyProgramme}
+    \usebeamercolor{title in headline}{\color{bg}\@studyProgramme}
   \end{textblock*}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
