@@ -27,6 +27,23 @@ Die Dokumentenklasse wird wie jede andere Klasse geladen:
 ```
 
 
+## Befehle
+
+Folgende Befehle stehen zur Verfügung:
+
+`\studyProgramme{<studyProgramme>}`:
+Studiengang. Default: `{Bachelor-Studiengang Mathematik}`
+
+`\advisor{<advisor>}`:
+Name des Betreuers. Default: `{Prof. Dr. XY}`
+
+`\authorLabel{<authorLabel>}`:
+Text, der hinter dem Namen Autors steht. Default: ` (Autor)`
+
+`\advisorLabel{<advisorLabel>}`:
+Text, der hinter dem Namen des Betreuers steht. Default: ` (Betreuer)`
+
+
 ### Optionen
 
 Die folgenden Optionen können per `\documentclass[option1, option2, ...]{hftpostr}` gesetzt werden.
@@ -45,18 +62,6 @@ Zusätzlicher Abstand zwischen Überschrift und erstem Inhalt. Default: `5mm`
 
 `blockDistance=<blockDistance>`:
 Zusätzlicher Abstand zwischen einzelnen Blöcken. Default: `7ex`
-
-`studyProgramme=<studyProgramme>`:
-Studiengang. Default: `{Bachelor-Studiengang Mathematik}`
-
-`advisor=<advisor>`:
-Name des Betreuers. Default: `{Prof. Dr. XYZ}`
-
-`authorLabel=<authorLabel>`:
-Text, der hinter dem Namen Autors steht. Default: `\ (Autor)`
-
-`advisorLabel=<advisorLabel>`:
-Text, der hinter dem Namen des Betreuers steht. Default: `\ (Betreuer)`
 
 
 ## Auswahl des Themes
